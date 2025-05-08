@@ -1,0 +1,74 @@
+.calendar-anim {
+	animation: calendar-col3 .7s ease forwards;
+	transform: translateX(-300%);
+	opacity: 1;
+}
+
+@keyframes calendar-anim {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+
+.calendar-colAnim3 {
+	animation: calendar-col3 .7s ease forwards;
+	transform: translateX(-300%);
+	opacity: 1;
+}
+
+@keyframes calendar-col3 {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.calendar-colAnim2 {
+	animation: calendar-col2 .7s ease .3s forwards;
+	transform: translateX(-200%);
+	opacity: 1;
+}
+
+@keyframes calendar-col2 {
+	0% {
+		transform: translateX(-200%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.calendar-colAnim1 {
+	animation: calendar-col1 .7s ease .6s forwards;
+	transform: translateX(-100%);
+	opacity: 1;
+}
+
+@keyframes calendar-col1 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.geo-rowAnim {
+	animation: geo-row1 .7s ease  forwards;
+	opacity: 1;
+}
+
+@keyframes geo-row1 {
+	0% {
+		clip-path: inset(50% 0 50% 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
+}

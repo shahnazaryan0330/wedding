@@ -1,0 +1,481 @@
+:root {
+	--color1: #3d2f23;
+	--color2: #a30000;
+	--color3: #c9bba9;
+	--color4: #000000;
+}
+
+@font-face {
+	font-family: "Montserrat-regular";
+	src: url(./fonts/Montserratarm-Light.otf);
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url(./fonts/Montserratarm-Thin.otf);
+}
+
+@font-face {
+	font-family: "Montserrat-medium";
+	src: url(./fonts/Montserratarm-Medium.otf);
+}
+
+@font-face {
+	font-family: "South Coast";
+	src: url(./fonts/SouthCoast-m2jex.otf);
+}
+
+@font-face {
+	font-family: "Dzeragir";
+	src: url(./fonts/Vrdznagir.otf);
+}
+
+@font-face {
+	font-family: "Merriweather";
+	src: url(./fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+@font-face {
+	font-family: 'ArmOmega';
+	src: url(./fonts/ArmomegaU.ttf);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	background-color: #f1ece6;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.header-reset {
+	margin: 0;
+}
+
+.main {
+	overflow: hidden;
+	width: 500px;
+	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.082);
+}
+
+.page {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 1%;
+}
+
+/* slide1 */
+#slide1 {
+	padding: 0 0 50px 0;
+}
+
+.slide1-title {
+	width: 100%;
+	padding: 5% 0 0 3%;
+	margin-bottom: 5%;
+	font-family: 'Montserrat';
+	font-size: 13pt;
+	color: var(--color4);
+}
+
+.slide1-img-box {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 15%;
+	display: flex;
+	justify-content: center;
+}
+
+.slide1-text {
+	position: absolute;
+	font-family: "South Coast";
+	font-size: 32pt;
+	line-height: 130%;
+	color: var(--color2);
+	transform: rotate(5deg);
+}
+
+.slide1-text * {
+	width: 930px;
+}
+
+.slide1-text div:nth-child(2n) {
+	position: relative;
+	left: -10%;
+}
+
+.slide1-img {
+	position: absolute;
+	top: 11%;
+	width: 220px;
+	height: 300px;
+	background-image: url('./source/img/IMG_4773.jpg');
+	background-size: cover;
+	border: 5px solid #ffff;
+	background-position: 0% 100%;
+}
+
+.slide1-subtitle {
+	width: 100%;
+	margin-bottom: 130px;
+	text-align: end;
+	padding-right: 20px;
+	font-family: 'Montserrat';
+	font-size: 13pt;
+	color: var(--color4);
+}
+
+.postcard {
+	width: 70%;
+	height: 221px;
+}
+
+.postcard * {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.postcard-back {
+	background-image: url('./source/img/postcard-back.png');
+}
+
+.postcard-front {
+	z-index: 1;
+	background-image: url('./source/img/postcard-front.png');
+}
+
+.postcard-open {
+	top: 0%;
+}
+
+.postcard-inner {
+	background-image: url('./source/img/postcard-inner.png');
+}
+
+.postcard-outer {
+	z-index: 1;
+	background-image: url('./source/img/postcard-outer.png');
+}
+
+.postcard-paper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('./source/img/postcard-paper.png');
+}
+
+.postcard-paper * {
+	position: relative;
+	top: -5%;
+	width: max-content;
+	height: max-content;
+	font-family: 'Dzeragir';
+	color: var(--color1);
+	font-size: 12pt;
+}
+
+.postcard-paper div:nth-child(1) {
+	margin-bottom: 15px;
+	font-size: 18pt;
+	color: var(--color2);
+}
+
+/* slide 2 */
+#slide2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-bottom: 50px;
+}
+
+.calendar {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: 'ArmOmega';
+	text-transform: uppercase;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	margin-bottom: 100px;
+	opacity: 0;
+}
+
+.calendar-col {
+	flex-basis: 33.3%;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.calendar-col:nth-child(3) {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.calendar-col * {
+	text-align: center;
+}
+
+.calendar-week {
+	padding: 10px 0;
+	border-bottom: 1px solid black;
+	font-size: 16pt;
+}
+
+.calendar-inner {
+	padding: 10px 0 30px;
+	overflow: hidden;
+}
+
+.calendar-weekday {
+	margin-bottom: 10px;
+	font-size: 11pt;
+}
+
+.calendar-day {
+	font-family: 'Montserrat-Medium';
+	font-size: 50pt;
+}
+
+.marker-circle {
+	position: absolute;
+	top: -10%;
+	width: clamp(0px, 50%, 195px);
+	height: 235px;
+}
+
+.slide2-text {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 100px;
+}
+
+.geo {
+	width: 100%;
+	padding: 0 0 0 3%;
+}
+
+.geo-row {
+	display: flex;
+}
+
+.geo-row-img {
+	width: 30%;
+	min-width: 145.5px;
+	margin-right: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.geo-row-img1 {
+	background-image: url('./source/img/rings.png');
+}
+
+.geo-row-img2 {
+	background-image: url('./source/img/cups.png');
+}
+
+.geo-row-content {
+	padding: 1% 0 3% 10px;
+	border-left: 1px solid black;
+	font-family: 'ArmOmega';
+	opacity: 0;
+}
+
+.geo-row:nth-child(1) {
+	margin-bottom: 5%;
+}
+
+.geo-row-time {
+	margin-bottom: 8px;
+	font-family: 'Merriweather';
+	font-size: 30pt;
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.geo-row-text1 {
+	margin-bottom: 5px;
+	font-size: 12pt;
+}
+
+.geo-row-text2 {
+	margin-bottom: 10px;
+	font-size: 9pt;
+	color: #82807c;
+}
+
+.geo-row-link {
+	padding: 5px 8px;
+	text-decoration: none;
+	color: var(--color4);
+	border-radius: 15px;
+	font-size: 11pt;
+	border: 1px solid var(--color4);
+}
+
+/* slide3 */
+#slide3 {
+	display: flex;
+	justify-content: center;
+	padding: 50px 0;
+}
+
+.slide3-img {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 75%;
+	height: 50vh;
+	border: 5px solid #ffff;
+	background-image: url('./source/img/IMG_6991.jpg');
+	background-size: cover;
+	transform: rotate(7deg);
+}
+
+.slide3-line1 {
+	position: absolute;
+	top: -10%;
+	width: 200%;
+	height: 100px;
+}
+
+.slide3-line2 {
+	position: absolute;
+	bottom: -10%;
+	transform: rotate(180deg);
+	width: 200%;
+	height: 100px;
+}
+
+/* slide 4 */
+#slide4 {
+	padding: 100px 0 50px;
+}
+
+.slide4-img-box {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+.slide4-text {
+	position: absolute;
+	font-family: "South Coast";
+	font-size: 32pt;
+	line-height: 130%;
+	color: var(--color2);
+	transform: rotate(5deg);
+}
+
+.slide4-text * {
+	width: 642px;
+}
+
+.slide4-text-line1,
+.slide4-text-line2,
+.slide4-text-line3,
+.slide4-text-line4 {
+	opacity: 0;
+	z-index: 1;
+}
+
+.slide4-text div:nth-child(2n) {
+	position: relative;
+	left: -10%;
+}
+
+.slide4-img {
+	position: absolute;
+	top: 11%;
+	width: 230px;
+	height: 310px;
+	border: 5px solid #ffff;
+	background-image: url('./source/img/IMG_8752.jpg');
+	background-size: cover;
+	transform: rotate(7deg);
+}
+
+.slide4-text1,
+.slide4-text2,
+.slide4-text3 {
+	width: max-content;
+	margin: auto;
+	opacity: 0;
+}
+
+.slide4-text1,
+.slide4-text2 {
+	font-size: 16pt;
+	font-family: 'Montserrat-regular';
+}
+
+.slide4-text2 {
+	margin-bottom: 30px;
+}
+
+.slide4-text3 {
+	font-family: 'Montserrat-medium';
+	font-size: 18pt;
+	color: var(--color2);
+}
+
+/* slide 5 */
+#slide5 {
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slide5-img {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 30px;
+	background-image: url('./source/img/IMG_6994.jpg');
+	background-position: -30% 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.slide5-text {
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+.slide5-text1 {
+	font-size: 70pt;
+}
+
+.slide5-text2 {
+	position: absolute;
+	top: 42%;
+	right: 5%;
+	width: 62%;
+	height: 81%;
+}
+
+.slide5-text3 {
+	font-size: 18pt;
+	font-family: 'ArmOmega';
+}
