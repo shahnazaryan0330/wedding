@@ -62,13 +62,12 @@ window.addEventListener('DOMContentLoaded', () => {
 			}, 5000)
 
 			const elements = document.querySelectorAll('.anim');
+			console.log(elements);
 
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
 						const dataId = entry.target.getAttribute('data-id')
-
-						entry.target.classList.add(dataId);
 
 						if (dataId === 'slide2-textAnim') {
 							cirlceAnim.play()
@@ -90,6 +89,13 @@ window.addEventListener('DOMContentLoaded', () => {
 						}
 						else if (dataId === 'slide5-text2Anim') {
 							slide5Img.play()
+						}
+						else if(dataId === 'slide5-imgAnim') {
+							document.querySelector('.slide5-img')
+							.classList.add(dataId)
+						}
+						else {
+							entry.target.classList.add(dataId);
 						}
 					}
 				});

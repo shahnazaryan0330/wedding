@@ -551,6 +551,7 @@ body {
 	background-position: -30% 0%;
 	background-repeat: no-repeat;
 	background-size: contain;
+	transform: translateX(-100%);
 }
 
 .slide5-text {
@@ -586,4 +587,5 @@ body {
 
 #myAudio {
 	width: 80%;
+	padding-bottom: 20px;
 }

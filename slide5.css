@@ -1,0 +1,13 @@
+.slide5-imgAnim {
+	animation: slide5-imgAnim 2s ease forwards;
+}
+
+@keyframes slide5-imgAnim {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
