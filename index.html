@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="media.css">
-	<link rel="stylesheet" href="slide1.css">
+	<link id="slide1" rel="stylesheet">
 	<link rel="stylesheet" href="slide2.css">
 	<link rel="stylesheet" href="slide3.css">
 
@@ -18,6 +18,13 @@
 
 <body>
 	<div class="main">
+		<div class="opening">
+		<div class="opening-inner">
+			<div class="opening-header">Բարի Գալուստ</div>
+			<div class="opening-img"></div>
+			<div class="opening-text">Շարունակելու համար խնդրում ենք բարձրացնել ձայնը և սեղմել էկրանին</div>
+		</div>
+	</div>
 		<div id="slide1" class="page">
 			<h1 class="header-reset slide1-title">Սերը...</h1>
 
@@ -167,7 +174,7 @@
 					</div>
 				</div>
 
-				<div class="slide4-img"></div>
+				<div class="slide4-img" data-id="slide4-imgAnim"></div>
 			</div>
 			<div class="slide4-text1 anim" data-id="slide4-textAnim">Սա մեզ համար</div>
 			<div class="slide4-text2 anim" data-id="slide4-textAnim">հատուկ օր է</div>
@@ -182,6 +189,12 @@
 			</div>
 
 			<div class="slide5-text3">Armen & Mane</div>
+		</div>
+
+		<div class="footer">
+			<audio controls id="myAudio">
+			<source src="./source/audio.mp3" type="audio/mpeg">
+		</audio>
 		</div>
 	</div>
 </body>

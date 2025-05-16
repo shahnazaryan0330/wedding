@@ -40,7 +40,13 @@
 	src: url(./fonts/ArmomegaU.ttf);
 }
 
+@font-face {
+	font-family: 'ArmCoronet';
+	src: url(./fonts/ArmCoronetU.ttf);
+}
+
 body {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	margin: 0;
@@ -72,9 +78,101 @@ body {
 	gap: 1%;
 }
 
+.opening {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #b19490;
+	z-index: 100;
+	font-family: 'ArmCoronet';
+	color: var(--color2);
+	font-size: 30px;
+	transition: transform ease 1s;
+}
+
+.opening-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 10px 30px 40px;
+	background-color: #e6dcd2;
+	border-radius: 7px;
+}
+
+.opening-header {
+	font-size: 40px;
+}
+
+.opening-img {
+	width: clamp(0px, 100%, 456px);
+	height: 150px;
+	background-image: url('./source/img/opening-img.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.opening-header {
+	animation: opening-header 3s ease forwards;
+	opacity: 0;
+}
+
+.opening-text {
+	text-align: center;
+}
+
+@keyframes opening-header {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.opening-img {
+	animation: opening-img 3s ease .3s forwards; 
+	opacity: 0;
+}
+
+@keyframes opening-img {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.opening-text {
+	animation: opening-text 3s ease .6s forwards;
+	opacity: 0;
+}
+
+@keyframes opening-text {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 /* slide1 */
 #slide1 {
 	padding: 0 0 50px 0;
+}
+
+#slide1 * {
+	opacity: 0;
 }
 
 .slide1-title {
@@ -410,7 +508,7 @@ body {
 	border: 5px solid #ffff;
 	background-image: url('./source/img/IMG_8752.jpg');
 	background-size: cover;
-	transform: rotate(7deg);
+	transform: translateX(-200%);
 }
 
 .slide4-text1,
@@ -478,4 +576,14 @@ body {
 .slide5-text3 {
 	font-size: 18pt;
 	font-family: 'ArmOmega';
+}
+
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#myAudio {
+	width: 80%;
 }

@@ -48,41 +48,55 @@ window.addEventListener('beforeunload', function () {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-	setTimeout(() => {
-		document.body.style.overflow = 'visible'
-	}, 5000)
+	document.querySelector('.opening')
+		.addEventListener('click', () => {
+			document.querySelector('.opening').style.transform = 'translateY(-200%)'
 
-	const elements = document.querySelectorAll('.anim');
+			const audio = document.getElementById("myAudio");
+			audio.play();
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const dataId = entry.target.getAttribute('data-id')
+			document.querySelector('#slide1').setAttribute('href', 'slide1.css')
 
-				entry.target.classList.add(dataId);
+			setTimeout(() => {
+				document.body.style.overflow = 'visible'
+			}, 5000)
 
-				if (dataId === 'slide2-textAnim') {
-					cirlceAnim.play()
-					slide2Text.play()
-				}
-				else if (dataId === 'slide3-imgAnim') {
-					line1.play()
-					line2.play()
-				}
-				else if (dataId === 'slide4-img-box') {
-					document.querySelectorAll('.slide4-text-lines')
-						.forEach(item => {
-							item.classList.add(item.getAttribute('data-id'))
-						})
-				}
-				else if (dataId === 'slide5-text2Anim') {
-					slide5Img.play()
-				}
-			}
-		});
-	}, {
-		threshold: 0.7
-	});
+			const elements = document.querySelectorAll('.anim');
 
-	elements.forEach(el => observer.observe(el));
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const dataId = entry.target.getAttribute('data-id')
+
+						entry.target.classList.add(dataId);
+
+						if (dataId === 'slide2-textAnim') {
+							cirlceAnim.play()
+							slide2Text.play()
+						}
+						else if (dataId === 'slide3-imgAnim') {
+							line1.play()
+							line2.play()
+						}
+						else if (dataId === 'slide4-img-box') {
+							document.querySelectorAll('.slide4-text-lines')
+								.forEach(item => {
+									item.classList.add(item.getAttribute('data-id'))
+								})
+
+							const slide4Img = document.querySelector('.slide4-img')
+
+							slide4Img.classList.add(slide4Img.getAttribute('data-id'))
+						}
+						else if (dataId === 'slide5-text2Anim') {
+							slide5Img.play()
+						}
+					}
+				});
+			}, {
+				threshold: 0.5
+			});
+
+			elements.forEach(el => observer.observe(el));
+		})
 })

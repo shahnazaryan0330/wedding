@@ -43,7 +43,7 @@
 	}
 
 	100% {
-		transform: translateX(5%);
+		transform: translateX(10%);
 	}
 }
 
@@ -61,4 +61,19 @@
 		transform: translateY(0%);
 		opacity: 1
 	}
+}
+
+.slide4-imgAnim {
+	animation: slide4-imgAnim 1s ease forwards;
+}
+
+@keyframes slide4-imgAnim {
+	0% {
+		transform: translateX(-200%) rotate(0deg);
+	}
+
+	100% {
+		transform: translateX(0%) rotate(7deg);
+	}
+
 }
